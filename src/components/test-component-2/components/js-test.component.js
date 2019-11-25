@@ -1,6 +1,6 @@
 console.log("yihaaa");
 var testComponent = {
-  template: require("./js-test.template.html"),
+  template: require("src/components/test-component-2/components/js-test.template.html"),
   bindings: {
     text: "<"
   },

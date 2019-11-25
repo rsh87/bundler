@@ -1,1 +1,1 @@
-angular.bootstrap(document, ["testModule"], { strictDi: true });
+angular.bootstrap(document, ["testModule", "tsTestModule"], { strictDi: true });
