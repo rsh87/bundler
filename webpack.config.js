@@ -1,6 +1,7 @@
 // Webpack uses this to work with directories
 const path = require("path");
 const glob = require("glob");
+const CopyPlugin = require("copy-webpack-plugin");
 
 // This is main configuration object.
 // Here you write different options and tell Webpack what to do
@@ -21,6 +22,9 @@ module.exports = {
     filename: "[name].bundle.js"
   },
   devtool: "inline-source-map",
+  devServer: {
+    contentBase: "./dist"
+  },
 
   // Default mode for Webpack is production.
   // Depending on mode Webpack will apply different things
@@ -43,5 +47,6 @@ module.exports = {
     alias: {
       src: path.resolve(__dirname, "./src")
     }
-  }
+  },
+  plugins: [new CopyPlugin([{ from: "./src/index.html" }])]
 };

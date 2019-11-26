@@ -7,7 +7,7 @@ var testComponent = {
   controller: function() {
     var $ctrl = this;
 
-    console.log("Component loaded");
+    console.log("Component loadeded!");
   }
 };
 
